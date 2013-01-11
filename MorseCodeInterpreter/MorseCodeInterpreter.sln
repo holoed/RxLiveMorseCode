@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorseCodeInterpreter", "MorseCodeInterpreter\MorseCodeInterpreter.csproj", "{ECB9C605-6507-41A2-B5CD-EA7B8621F5C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorseCodeInterpreterTests", "MorseCodeInterpreterTests\MorseCodeInterpreterTests.csproj", "{A6A488B9-49BD-4E0A-B4AF-E82BB17676B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorseCodeClient", "MorseCodeClient\MorseCodeClient.csproj", "{094EFD4A-2036-49B8-8AD7-0CCF99D92262}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs09
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MorseCodeClient\\MorseCodeClient.csproj
+		SccProjectName1 = MorseCodeClient
+		SccLocalPath1 = MorseCodeClient
+		SccProjectUniqueName2 = MorseCodeInterpreter\\MorseCodeInterpreter.csproj
+		SccProjectName2 = MorseCodeInterpreter
+		SccLocalPath2 = MorseCodeInterpreter
+		SccProjectUniqueName3 = MorseCodeInterpreterTests\\MorseCodeInterpreterTests.csproj
+		SccProjectName3 = MorseCodeInterpreterTests
+		SccLocalPath3 = MorseCodeInterpreterTests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECB9C605-6507-41A2-B5CD-EA7B8621F5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB9C605-6507-41A2-B5CD-EA7B8621F5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB9C605-6507-41A2-B5CD-EA7B8621F5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9C605-6507-41A2-B5CD-EA7B8621F5C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A488B9-49BD-4E0A-B4AF-E82BB17676B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A488B9-49BD-4E0A-B4AF-E82BB17676B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A488B9-49BD-4E0A-B4AF-E82BB17676B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A488B9-49BD-4E0A-B4AF-E82BB17676B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094EFD4A-2036-49B8-8AD7-0CCF99D92262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094EFD4A-2036-49B8-8AD7-0CCF99D92262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094EFD4A-2036-49B8-8AD7-0CCF99D92262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094EFD4A-2036-49B8-8AD7-0CCF99D92262}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
