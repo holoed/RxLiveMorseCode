@@ -8,9 +8,8 @@ using MorseCodeInterpreter;
 
 namespace MorseCodeClient
 {
-    class Program
+    internal class Program
     {
-
         public static IObservable<char> MorseCodeLiveStream()
         {
             var subject = new Subject<char>();
@@ -22,27 +21,27 @@ namespace MorseCodeClient
                                  info = Console.ReadKey();
                                  subject.OnNext(info.KeyChar);
                              } while (info.Key != ConsoleKey.Enter);
-                             Console.WriteLine("Done...");
+                             Environment.Exit(0);
                          });
-            return subject.AsObservable().ObserveOn(CurrentThreadScheduler.Instance).SubscribeOn(CurrentThreadScheduler.Instance);
+            return subject
+                .AsObservable()
+                .ObserveOn(CurrentThreadScheduler.Instance)
+                .SubscribeOn(CurrentThreadScheduler.Instance);
         }
 
 
-
-        static void Main(string[] args)
+        private static void Main()
         {
             var xss = MorseCodeLiveStream();
-            int index = 0;
-            xss.TranslateMorseCode().Subscribe(xs =>
-                                                   {
-                                                       xs.Subscribe(x =>
-                                                                        {
-                                                                            var oldpos = Console.CursorLeft;
-                                                                            Console.SetCursorPosition(index, 1);
-                                                                            Console.Write(x);
-                                                                            Console.SetCursorPosition(oldpos, 0);
-                                                                        }, () => index++);
-                                                   });
+            var index = 0;
+            xss.TranslateMorseCode()
+                .Subscribe(xs => xs.Subscribe(x =>
+                                                  {
+                                                      var oldpos = Console.CursorLeft;
+                                                      Console.SetCursorPosition(index, 1);
+                                                      Console.Write(x);
+                                                      Console.SetCursorPosition(oldpos, 0);
+                                                  }, () => index++));
             Thread.Sleep(-1);
         }
     }
